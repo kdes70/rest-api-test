@@ -1,0 +1,30 @@
+<div class="tab-pane" id="tambah">
+    <br/>
+    <div class="alert alert-success" role="alert">Berhasil <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button></div>
+    <div class="alert alert-warning" role="alert">Ada sedikit masalah <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button></div>
+    <div class="alert alert-danger" role="alert">Error, coba lagi <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button></div>
+    <br/>
+    <h1>{/title/}</h1>
+    <pre>
+        {/make | json/}
+    </pre>
+    <form role="form">
+
+        <div class="form-group">
+            <label for="model">Model</label>
+            <input type="text" class="form-control" name="{/model/}" id="model" placeholder="Model">
+        </div>
+        <div class="form-group">
+            <label for="make">Make</label>
+            <select class="form-control tokenizer" id="make" ng-options="item as item.name for item in make track by item.id" ng-model="selected"></select>
+        </div>
+        <div class="form-group">
+            <label for="prise">Price</label>
+            <input type="text" class="form-control" id="prise" placeholder="Prise">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="button" class="btn btn-success">Back</button>
+    </form>
+    <br/>
+</div>
